@@ -16,6 +16,9 @@ const Profile = {
 const Posts = {
     template: `<div><h3><font color="green">我是posts组件 </font></h3></div>`
 }
+const NotFount = {
+    template: `<div><h3>  404您访问的页面不存在 </h3></div>`
+}
 Vue.use(Router)
 
 export default new Router({
@@ -23,8 +26,9 @@ export default new Router({
     linkExactActiveClass: 'nav',
     routes: [{
             path: '/',
-            name: 'HelloWorld',
-            component: HelloWorld
+            redirect: "/page"
+                // name: 'HelloWorld',
+                // component: HelloWorld
         },
         {
             path: "/page",
@@ -61,6 +65,22 @@ export default new Router({
                     component: Posts,
                 }
             ]
-        }
+        },
+        // 路由的重定向：表示将你原来在转发列表中发向路由的路径改成另一条路由的路径，
+        // 你的数据会存到另一路由的服务器上
+        // {
+        //     path: "*",
+        //     // component: NotFount,
+        //     redirect: (to) => {
+        //         console.log(to);
+        //         if (to.path === "/aaa") {
+        //             return "/page"
+        //         } else if (to.path === "/bbb") {
+        //             return "/work"
+        //         } else {
+        //             return '/'
+        //         }
+        //     }
+        // }
     ]
 })
