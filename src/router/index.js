@@ -20,6 +20,7 @@ const NotFount = {
     template: `<div><h3>  404您访问的页面不存在 </h3></div>`
 }
 import Datalist from '@/components/datalist'
+import Sort from '@/components/sort'
 Vue.use(Router)
 
 export default new Router({
@@ -40,6 +41,11 @@ export default new Router({
             path: "/work",
             name: "Work",
             component: Work
+        },
+        {
+            path: "/sort",
+            name: "Sort",
+            component: Sort
         },
         {
             path: "/frist/:id",
