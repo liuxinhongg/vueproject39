@@ -17,6 +17,7 @@
         data() {
             return {
                 aa: "导航一",
+                bb: "子向父传值"
             }
         },
         // props: {
@@ -28,7 +29,7 @@
         methods: {
             changetitle() {
                 console.log(11);
-                this.$emit("titlechange", "子向父传值")
+                this.$emit("titlechange", this.bb)
             }
         },
     }
