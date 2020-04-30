@@ -21,6 +21,7 @@ const NotFount = {
 }
 import Datalist from '@/components/datalist'
 import Sort from '@/components/sort'
+import count from '@/components/count'
 Vue.use(Router)
 
 export default new Router({
@@ -41,6 +42,11 @@ export default new Router({
             path: "/work",
             name: "Work",
             component: Work
+        },
+        {
+            path: "/count",
+            name: "count",
+            component: count
         },
         {
             path: "/sort",
